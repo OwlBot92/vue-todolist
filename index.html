@@ -21,21 +21,26 @@
             <div class="header">
                 <img src="img/logo-bool.png" alt="">
                 <div class="input-section">
-                    <input type="text" placeholder="Nuovo Todo">
-                    <button>Aggiungi</button>
+                    <input type="text" placeholder="Nuovo Todo" v-model="testo" v-on:keyup.enter="addTodo()">
+                    <button v-on:click="addTodo()">Aggiungi</button>
                 </div>
             </div>
 
+            <!-- container della UL -->
             <div class="list-box">
+                <!-- unordered list -->
                 <ul class="list-u">
-                    <li>
-                        task 1
-                        <i class="fas fa-times"></i>
+                    <!-- LI generati con VUE dinamicamente -->
+                    <li v-for="(content, index) in ulContent">
+                        <div>
+                            <i class="fab fa-rebel"></i>
+                            <span>{{ content }}</span>
+                        </div>
+                        <span v-on:click="removeTodo(index)">
+                            <i class="fas fa-times"></i>
+                        </span>
                     </li>
 
-                    <li>
-                        task 1
-                    </li>
                 </ul>
             </div>
         </div>

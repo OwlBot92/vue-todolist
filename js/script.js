@@ -6,9 +6,9 @@ var app = new Vue({
         testo: "",
         /* contenuto di default della lista */
         ulContent: [
-            "Struttura file HTML",
-            "Style nel file CSS",
-            "Aggiungere funzionalità in JS"
+            "Strutturare file HTML",
+            "Stilizzare tramite CSS",
+            "Aggiungere funzionalità JS"
         ]
     },
 

@@ -33,10 +33,10 @@
                     <!-- LI generati con VUE dinamicamente -->
                     <li v-for="(content, index) in ulContent">
                         <div>
-                            <i class="fab fa-rebel"></i>
+                            <i class="fas fa-code"></i>
                             <span>{{ content }}</span>
                         </div>
-                        <span v-on:click="removeTodo(index)">
+                        <span class="cross-awesome" v-on:click="removeTodo(index)">
                             <i class="fas fa-times"></i>
                         </span>
                     </li>

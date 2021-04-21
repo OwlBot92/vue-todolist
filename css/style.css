@@ -31,6 +31,10 @@ button{
     min-width: 250px;
     margin-right: 10px;
 }
+button,
+.cross-awesome{
+    cursor: pointer;
+}
 
 /* sezione con la ul e i li */
 .list-box{

@@ -53,3 +53,8 @@ li{
     padding: 10px;
     list-style: none;
 }
+
+#search{
+    display: block;
+    margin: 40px auto;
+}

@@ -31,18 +31,20 @@
                 <!-- unordered list -->
                 <ul class="list-u">
                     <!-- LI generati con VUE dinamicamente -->
-                    <li v-for="(content, index) in ulContent">
+                    <li v-for="(content, index) in ulContent" v-if="content.visible">
                         <div>
                             <i class="fas fa-code"></i>
-                            <span>{{ content }}</span>
+                            <span>{{ content.liTxt }}</span>
                         </div>
                         <span class="cross-awesome" v-on:click="removeTodo(index)">
                             <i class="fas fa-times"></i>
                         </span>
                     </li>
-
                 </ul>
             </div>
+
+            
+            <input v-model="inputFilter" id="search" type="text" placeholder="Search" v-on:keyup="filterTodos()">
         </div>
 
         <script src="js/script.js"></script>

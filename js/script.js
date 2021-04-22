@@ -26,7 +26,10 @@ var app = new Vue({
         /* permette di aggiungere alla todo */
         addTodo(){
             if (this.testo.length) {
-                this.ulContent.push(this.testo);
+                this.ulContent.push({
+                    liTxt: this.testo,
+                    visible: true
+                });
                 this.testo = "";
             }
         },
